@@ -20,8 +20,8 @@ function App() {
 
   useEffect(() => {
     if (cursorRef.current) {
-      const offsetY = 20;
-      const offsetX = 20; 
+      const offsetY = 10;
+      const offsetX = 10; 
       
       cursorRef.current.style.transition = 'none';
       cursorRef.current.style.transform = `translate(${mousePosition.x - offsetX}px, ${mousePosition.y - offsetY}px)`;

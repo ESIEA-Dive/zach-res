@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 
 import './Projects.css';
 
@@ -12,6 +11,7 @@ const projects = ({ setIsHovered }) => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
+  
   return (
   <div className='mg-top-b'>
     <div>

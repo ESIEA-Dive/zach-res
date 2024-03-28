@@ -32,8 +32,8 @@
 
 .cursor {
   background-color: #111;
-  height: 32px;
-  width: 32px;
+  height: 22px;
+  width: 22px;
   border-radius: 50%;
   position: fixed;
   top: 0;
