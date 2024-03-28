@@ -4,7 +4,7 @@ import './Music.css';
 
 const music = () => {
   return (
-    <div>
+    <div className='mg-top-m'>
       <p>#now-playing -</p>
     </div>
   );

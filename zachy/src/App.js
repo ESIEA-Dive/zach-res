@@ -4,8 +4,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 function App() {
-  const [mousePosition, setMousePosition] = useState({ x: null, y: null });
   const [isHovered, setIsHovered] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: null, y: null });
   const cursorRef = useRef(null);
 
   useEffect(() => {
@@ -17,14 +17,6 @@ function App() {
       window.removeEventListener('mousemove', updateMousePosition);
     };
   }, []);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
 
   useEffect(() => {
     if (cursorRef.current) {
@@ -46,13 +38,15 @@ function App() {
         className={`cursor ${isHovered ? 'green' : ''}`}
         ref={cursorRef}
       />
-      <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
       <Title/>
-      </div>
-      <Projects/>
+      <Projects
+        setIsHovered={setIsHovered}
+      />
       <About/>
       <Music/>
-      <Footer/>
+      <Footer
+        setIsHovered={setIsHovered}
+      />
       </div>
     </div>
   );

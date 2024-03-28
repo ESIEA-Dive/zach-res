@@ -4,14 +4,14 @@ import './Title.css';
 
 const title = () => {
   return (
-    <div>
+    <div className='mg-top-b'>
       <div>
         <h2>zach dive</h2>
         <h2>creative technologist</h2>
       </div>
-      <div>
+      <div className='mg-top-b'>
         <h2>work</h2>
-        <p>most recently I was working on the technical team @Adept AI Labs</p>
+        <p className='mg-top-m'>most recently I was working on the <br/> technical team @Adept AI Labs</p>
       </div>
     </div>
   );

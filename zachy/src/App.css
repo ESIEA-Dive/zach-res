@@ -1,12 +1,26 @@
 .app {
   background-color: var(--secondary-color);
   /* font-family: var(--font-base); */  
+  color: var(--primary-color);
 }
 
 .app-container {
   max-width: 600px;
   padding: 4rem .5rem;
   margin: 0 auto;
+}
+
+.app-center {
+  display: flex;
+  justify-content: center;
+}
+
+.mg-top-b {
+  margin-top: 4em;
+}
+
+.mg-top-m {
+  margin-top: 2em;
 }
 
 .cursor {
