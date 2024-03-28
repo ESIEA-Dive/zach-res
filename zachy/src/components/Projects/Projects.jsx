@@ -15,7 +15,7 @@ const projects = ({ setIsHovered }) => {
   return (
   <div className='mg-top-b'>
     <div>
-      <h1>personal projects</h1>
+      <h2>personal projects</h2>
       
       <ol onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='mg-top-m'>
         <li>adam: generative computer-aided design</li>
@@ -26,7 +26,7 @@ const projects = ({ setIsHovered }) => {
     </div>
 
     <div className='mg-top-m'>
-      <h1>personal projects</h1>
+      <h2>past projects</h2>
 
       <ol onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='mg-top-m'>
         <li>junctionx exeter: a large-scale hackathon</li>

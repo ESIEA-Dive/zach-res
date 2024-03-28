@@ -7,7 +7,7 @@ const title = () => {
     <div className='mg-top-b'>
       <div>
         <h2>zach dive</h2>
-        <h2>creative technologist</h2>
+        <p className='big'>creative technologist</p>
       </div>
       <div className='mg-top-b'>
         <h2>work</h2>

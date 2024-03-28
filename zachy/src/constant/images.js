@@ -1,8 +1,7 @@
-// import mobile from '../assets/mobile.png';
-
+// import font from '../assets/fonts/ABCDiatypeRoundedPlusVariable-Trial.ttf';
 
 const imgs = {
-//   mobile,
+    // font
 };
 
 export default imgs;

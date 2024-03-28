@@ -1,7 +1,14 @@
+@font-face {
+  font-family: 'ABCDiatypeRoundedPlusVariable';
+  src: url('./assets/fonts/ABCDiatypeRoundedPlusVariable-Trial.ttf');
+}
+
 .app {
   background-color: var(--secondary-color);
-  /* font-family: var(--font-base); */  
+  font-family: 'ABCDiatypeRoundedPlusVariable', sans-serif;
   color: var(--primary-color);
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 .app-container {
