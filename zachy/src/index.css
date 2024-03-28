@@ -1,0 +1,13 @@
+:root {
+  /* --font--base :  */
+  
+  --primary-color: #222222;
+  --secondary-color: #E4DFDD;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
