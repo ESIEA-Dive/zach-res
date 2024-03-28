@@ -11,6 +11,11 @@
   line-height: 1.5;
 }
 
+.links-f {
+  color: inherit; 
+  text-decoration: none;
+}
+
 .app-container {
   max-width: 600px;
   padding: 4rem .5rem;

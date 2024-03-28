@@ -1,0 +1,24 @@
+.links {
+    text-decoration: none; /* Remove default underline */
+    color: var(--primary-color); /* Set default link color */
+    position: relative; /* Required for the underline */
+  }
+  
+  .links::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust as needed */
+    width: 100%;
+    height: 2px; /* Adjust thickness of underline */
+    background-color: var(--primary-color); /* Set color of underline */
+    transition: width 0.3s; /* Add smooth transition effect */
+  }
+  
+  .links:hover::after {
+    width: 0; /* Hide underline on hover */
+  }
+  
+  .links:hover {
+    color: #2dd916; /* Change color on hover */
+  }
