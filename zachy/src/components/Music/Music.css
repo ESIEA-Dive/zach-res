@@ -1,3 +1,4 @@
 .lol {
     color: var(--secondary-color);
+    position: absolute;
 }
