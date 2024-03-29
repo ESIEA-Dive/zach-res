@@ -1,7 +1,7 @@
-// import font from '../assets/fonts/ABCDiatypeRoundedPlusVariable-Trial.ttf';
+import fake from '../assets/images/free-images.jpg';
 
 const imgs = {
-    // font
+    fake
 };
 
 export default imgs;

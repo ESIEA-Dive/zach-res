@@ -9,6 +9,7 @@
   color: var(--primary-color);
   font-size: 15px;
   line-height: 1.5;
+  text-align: justify;
 }
 
 .links-f {
@@ -20,6 +21,8 @@
   max-width: 600px;
   padding: 4rem .5rem;
   margin: 0 auto;
+  position: relative;
+  z-index: 0;
 }
 
 .app-center {
@@ -51,26 +54,26 @@
 }
 
 .links {
-  text-decoration: none; /* Remove default underline */
-  color: var(--primary-color); /* Set default link color */
-  position: relative; /* Required for the underline */
+  text-decoration: none;
+  color: var(--primary-color);
+  position: relative;
 }
 
 .links::after {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -2px; /* Adjust as needed */
+  bottom: -2px;
   width: 100%;
-  height: 2px; /* Adjust thickness of underline */
-  background-color: var(--primary-color); /* Set color of underline */
-  transition: width 0.3s; /* Add smooth transition effect */
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s;
 }
 
 .links:hover::after {
-  width: 0; /* Hide underline on hover */
+  width: 0;
 }
 
 .links:hover {
-  color: #2dd916; /* Change color on hover */
+  color: #2dd916;
 }
