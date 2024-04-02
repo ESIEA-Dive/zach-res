@@ -3,6 +3,14 @@ import React from 'react';
 import './Footer.css';
 
 const footer = ({ setIsHovered }) => {
+
+  const links = [
+    { name: 'zach_dive@berkeley.edu', url: 'mailto:zach_dive@berkeley.edu' },
+    { name: 'twitter', url: 'https://x.com/zachdive?s=11&t=BorR7lwfN2Yl_k0dZdewww' },
+    { name: "linkedin", url: 'https://www.linkedin.com/in/zacharydive?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
+    { name: 'github', url: 'https://github.com/zachdive' }
+  ];
+
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
@@ -13,10 +21,18 @@ const footer = ({ setIsHovered }) => {
 
   return (
     <div className='mg-top-b app-center content' >
-      <a onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='links' href="mailto:zach_dive@berkeley.edu" target="_blank">zach_dive@berkeley.edu</a>
-      <a onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='links' href="https://x.com/zachdive?s=11&t=BorR7lwfN2Yl_k0dZdewww" target="_blank">twitter</a>
-      <a onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='links' href="https://www.linkedin.com/in/zacharydive?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">linkedin</a>
-      <a onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='links' href="https://github.com/zachdive" target="_blank">github</a>
+    {links.map((link, index) => (
+      <a 
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave} 
+        href={link.url} 
+        className="links"
+        key={index}
+        target="_blank"
+        >
+          {link.name}
+      </a>
+    ))}
     </div>
   );
 }
