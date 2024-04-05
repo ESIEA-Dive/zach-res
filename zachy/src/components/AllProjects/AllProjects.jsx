@@ -1,6 +1,6 @@
 import React from 'react';
 import { images } from '../../constant';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 
 import './AllProjects.css';
 
@@ -19,6 +19,9 @@ const AllProjects = () => {
 
     return (
         <div className='mg-top-b'>
+            <Link to="/#" className="back-button">
+                <span className="arrow"></span>
+            </Link>
             {project ? (
                 <div>
                     <h2>{project.title}</h2>
