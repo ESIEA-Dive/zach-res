@@ -9,10 +9,10 @@ const Projects = ({ setIsHovered }) => {
   const [hoveredProject, setHoveredProject] = useState(null);
 
   const personalProjects = [
-    { name: 'adam: generative computer-aided design', url: 1, img:`${images.fake}` },
-    { name: 'dreamscapes: a vr gaussian-splatting editor', url: 2, img:`${images.fake}` },
-    { name: "mint: order from local bay area farmers' markets", url: 3, img:`${images.fake}` },
-    { name: 'talesai: generative stories for children', url: 4, img:`${images.fake}` }
+    { name: 'adam: generative computer-aided design', url: '1', img:`${images.fake}` },
+    { name: 'dreamscapes: a vr gaussian-splatting editor', url: '2', img:`${images.fake}` },
+    { name: "mint: order from local bay area farmers' markets", url: '3', img:`${images.fake}` },
+    { name: 'talesai: generative stories for children', url: '4', img:`${images.fake}` }
   ];
 
   const pastProjects = [
@@ -37,10 +37,9 @@ const Projects = ({ setIsHovered }) => {
       <h2>personal projects</h2>
       
       <ol className='mg-top-m'>
-      {personalProjects.map((project) => (
-          <li key={project.url}>
+      {personalProjects.map((project, index) => (
+        <li key = {index}>
             <Link
-              key = {project.url}
               to = {project.url}
               onMouseEnter={() => handleMouseEnter(project)}
               onMouseLeave={handleMouseLeave} 

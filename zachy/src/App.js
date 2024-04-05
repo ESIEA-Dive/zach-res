@@ -60,7 +60,7 @@ function App() {
   return (
     <div className="app">
        <div className='app-container'>
-      <RouterProvider router={router} />
+        <RouterProvider router={router} />
       </div>
     </div>
   );

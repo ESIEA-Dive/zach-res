@@ -5,16 +5,15 @@ import { useParams } from 'react-router-dom';
 import './AllProjects.css';
 
 const projects = [
-    { title: 'adam: generative computer-aided design', url: 1, description: '', img:`${images.fake}` },
-    { title: 'dreamscapes: a vr gaussian-splatting editor', url: 2,  description: '', img:`${images.fake}` },
-    { title: "mint: order from local bay area farmers' markets", url: 3, description: '', img:`${images.fake}` },
-    { title: 'talesai: generative stories for children', url: 4, description: '', img:`${images.fake}` }
+    { title: 'adam: generative computer-aided design', url: 1, description: 'lol', img:`${images.fake}` },
+    { title: 'dreamscapes: a vr gaussian-splatting editor', url: 2,  description: 'hello', img:`${images.fake}` },
+    { title: "mint: order from local bay area farmers' markets", url: 3, description: 'ok', img:`${images.fake}` },
+    { title: 'talesai: generative stories for children', url: 4, description: 'fuk', img:`${images.fake}` }
 ]
 
 const AllProjects = () => {
     const params = useParams();
     const projectId = parseInt(params.projectId);
-    console.log(params);
 
     const project = projects.find(project => project.url === projectId);
 
