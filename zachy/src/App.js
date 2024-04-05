@@ -1,7 +1,8 @@
 import './App.css';
-import { About, Footer, Music, Projects, Title } from './components';
+import { About, AllProjects, Footer, Music, Projects, Title } from './components';
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 function App() {
   const [isHovered, setIsHovered] = useState(false);
@@ -31,22 +32,35 @@ function App() {
     }
   }, [mousePosition]);
 
+  const router = createBrowserRouter([
+    {
+      path : '/',
+      element : <div>
+                    <motion.div
+                      className={`cursor ${isHovered ? 'green' : ''}`}
+                      ref={cursorRef}
+                    />
+                    <Title/>
+                    <Projects
+                      setIsHovered={setIsHovered}
+                    />
+                    <About/>
+                    <Music/>
+                    <Footer
+                      setIsHovered={setIsHovered}
+                    />
+                  </div>,
+    }, 
+    {
+      path : '/:projectId',
+      element : <AllProjects/>,
+    }
+  ]);
+
   return (
     <div className="app">
-      <div className='app-container'>
-      <motion.div
-        className={`cursor ${isHovered ? 'green' : ''}`}
-        ref={cursorRef}
-      />
-      <Title/>
-      <Projects
-        setIsHovered={setIsHovered}
-      />
-      <About/>
-      <Music/>
-      <Footer
-        setIsHovered={setIsHovered}
-      />
+       <div className='app-container'>
+      <RouterProvider router={router} />
       </div>
     </div>
   );

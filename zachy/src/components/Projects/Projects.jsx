@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { images } from '../../constant';
+import { Link } from 'react-router-dom';
 
 import './Projects.css';
 
@@ -8,10 +9,10 @@ const Projects = ({ setIsHovered }) => {
   const [hoveredProject, setHoveredProject] = useState(null);
 
   const personalProjects = [
-    { name: 'adam: generative computer-aided design', url: 'https://example.com/adam', img:`${images.fake}` },
-    { name: 'dreamscapes: a vr gaussian-splatting editor', url: 'https://example.com/dreamscapes', img:`${images.fake}` },
-    { name: "mint: order from local bay area farmers' markets", url: 'https://example.com/mint', img:`${images.fake}` },
-    { name: 'talesai: generative stories for children', url: 'https://example.com/talesai', img:`${images.fake}` }
+    { name: 'adam: generative computer-aided design', url: 1, img:`${images.fake}` },
+    { name: 'dreamscapes: a vr gaussian-splatting editor', url: 2, img:`${images.fake}` },
+    { name: "mint: order from local bay area farmers' markets", url: 3, img:`${images.fake}` },
+    { name: 'talesai: generative stories for children', url: 4, img:`${images.fake}` }
   ];
 
   const pastProjects = [
@@ -36,16 +37,17 @@ const Projects = ({ setIsHovered }) => {
       <h2>personal projects</h2>
       
       <ol className='mg-top-m'>
-      {personalProjects.map((project, index) => (
-          <li key={index}>
-            <a 
+      {personalProjects.map((project) => (
+          <li key={project.url}>
+            <Link
+              key = {project.url}
+              to = {project.url}
               onMouseEnter={() => handleMouseEnter(project)}
               onMouseLeave={handleMouseLeave} 
-              href={project.url} 
               className="links"
               >
                 {project.name}
-            </a>
+            </Link>
           </li>
         ))}
       </ol>
