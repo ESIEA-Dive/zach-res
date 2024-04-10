@@ -9,16 +9,16 @@ const Projects = ({ setIsHovered }) => {
   const [hoveredProject, setHoveredProject] = useState(null);
 
   const personalProjects = [
-    { name: 'adam: generative computer-aided design', url: '1', img:`${images.fake}` },
-    { name: 'dreamscapes: a vr gaussian-splatting editor', url: '2', img:`${images.fake}` },
-    { name: "mint: order from local bay area farmers' markets", url: '3', img:`${images.fake}` },
-    { name: 'talesai: generative stories for children', url: '4', img:`${images.fake}` }
+    { name: 'adam: generative computer-aided design', url: 'projects/1', img:`${images.fake}` },
+    { name: 'dreamscapes: a vr gaussian-splatting editor', url: 'projects/2', img:`${images.fake}` },
+    { name: "mint: order from local bay area farmers' markets", url: 'projects/3', img:`${images.fake}` },
+    { name: 'talesai: generative stories for children', url: 'projects/4', img:`${images.fake}` }
   ];
 
   const pastProjects = [
-    { name: 'junctionx exeter: a large-scale hackathon', url: 'https://example/dream', img: '' },
-    { name: 'excode: free coding bootcamp at the university of exeter', url: 'https://example.com/dreamscapes', img: '' },
-    { name: "exeter entrepreneurs: a community of student entrepreneurs", url: 'https://example.com/mint', img: '' }
+    { name: 'junctionx exeter: a large-scale hackathon', url: 'pprojects/1', img:`${images.fake}`  },
+    { name: 'excode: free coding bootcamp at the university of exeter', url: 'pprojects/2', img:`${images.fake}` },
+    { name: "exeter entrepreneurs: a community of student entrepreneurs", url: 'pprojects/3', img:`${images.fake}` }
   ];
 
   const handleMouseEnter = (project) => {
@@ -64,7 +64,14 @@ const Projects = ({ setIsHovered }) => {
 
       {pastProjects.map((project, index) => (
           <li key={index}>
-            <a onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} href={project.url} className="links">{project.name}</a>
+              <Link
+              to = {project.url}
+              onMouseEnter={() => handleMouseEnter(project)}
+              onMouseLeave={handleMouseLeave} 
+              className="links"
+              >
+                {project.name}
+            </Link>
           </li>
         ))}
       </ol>

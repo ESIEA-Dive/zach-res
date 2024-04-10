@@ -27,7 +27,7 @@ function App() {
       cursorRef.current.style.transition = 'none';
       cursorRef.current.style.transform = `translate(${mousePosition.x - offsetX}px, ${mousePosition.y - offsetY}px)`;
       requestAnimationFrame(() => {
-        cursorRef.current.style.transition = 'transform 0.5s ease-out'; // Re-enable transition for smooth animation
+        cursorRef.current.style.transition = 'transform 0.5s ease-out';
       });
     }
   }, [mousePosition]);
@@ -52,7 +52,11 @@ function App() {
                   </div>,
     }, 
     {
-      path : '/:projectId',
+      path : 'projects/:projectId',
+      element : <AllProjects/>,
+    },
+    {
+      path : 'pprojects/:pprojectId',
       element : <AllProjects/>,
     }
   ]);
