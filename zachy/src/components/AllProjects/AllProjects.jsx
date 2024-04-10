@@ -88,7 +88,16 @@ const pprojects = [
     }
 ]
 
-const AllProjects = () => {
+const AllProjects = ( {setIsHovered} ) => {
+
+    const handleMouseEnter = () => {
+        setIsHovered(true);
+      };
+    
+      const handleMouseLeave = () => {
+        setIsHovered(false);
+      };
+
     const params = useParams();
     const projectId = parseInt(params.projectId);
     const pprojectId = parseInt(params.pprojectId);
@@ -99,7 +108,12 @@ const AllProjects = () => {
     return (
         <>
         <div>
-            <Link to="/#" className="back-button">
+            <Link 
+            to="/#" 
+            className="back-button"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave} 
+            >
                 <FaArrowLeft /><a className="back-b">back</a>
             </Link>
         </div>

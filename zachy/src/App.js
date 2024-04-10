@@ -53,11 +53,26 @@ function App() {
     }, 
     {
       path : 'projects/:projectId',
-      element : <AllProjects/>,
+      
+      element : <div>
+                  <motion.div
+                    className={`cursor ${isHovered ? 'green' : ''}`}
+                    ref={cursorRef}
+                  />
+                  <AllProjects
+                  setIsHovered={setIsHovered}
+                  />
+                </div>,
     },
     {
       path : 'pprojects/:pprojectId',
-      element : <AllProjects/>,
+      element : <div>
+                  <motion.div
+                    className={`cursor ${isHovered ? 'green' : ''}`}
+                    ref={cursorRef}
+                  />
+                  <AllProjects/>
+                </div>,
     }
   ]);
 
