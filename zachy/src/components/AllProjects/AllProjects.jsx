@@ -125,13 +125,13 @@ const AllProjects = () => {
                     <p className='mg-top-m'>{pproject.description}</p>
                     <img className='mg-top-m img' src={pproject.img} alt={pproject.name} />
                     <div className='box'>
-                        <h3>{project.title2}</h3>
-                        <p>{project.description2}</p>
+                        <h3>{pproject.title2}</h3>
+                        <p>{pproject.description2}</p>
                     </div>
-                    <img className='mg-top-m img' src={project.img} alt={project.title} />
+                    <img className='mg-top-m img' src={pproject.img} alt={pproject.title} />
                     <div className='box'>
-                        <h3>{project.title3}</h3>
-                        <p>{project.description3}</p>
+                        <h3>{pproject.title3}</h3>
+                        <p>{pproject.description3}</p>
                     </div>
                 </div>
             ) : (
